@@ -52,15 +52,40 @@ void setup() {
 /******************************
 
 Code
+
+Example:
+
+void loop() {
+  showDisplay(face); //Ritar ut mönstret "face" till display
+  
+  goForward(500); //Kör frammåt i 500ms, fortsätter köra om inget annat kommando ges
+  goBackward(500);  //Kör bakåt i 500ms, fortsätter köra om inget annat kommando ges
+  goLeft(500);  //Svänger vänster i 500ms, fortsätter köra om inget annat kommando ges
+  goRight(500);  //Svänger höger i 500ms, fortsätter köra om inget annat kommando ges
+  goStop(500);  //Står stilla i 500ms, fortsätter köra om inget annat kommando ges
+  
+  turnHead(50); //Vänder huvudet till 50 grader
+  
+  int distance = lookAhead(); //Läser av avståndet till närmsta hinder
+  Serial.println(distance); //Skriver ut till USB så att det går att se via Verktyg -> Seriell Monitor (Tools -> Serial Monitor)
+}
   
 ******************************/
 
 
 void loop() {
-  showDisplay(face);
-  goForward(500);
-  turnHead(50);
-  Serial.println(lookAhead()); 
+  showDisplay(face); //Ritar ut mönstret "face" till display
+  
+  goForward(500); //Kör frammåt i 500ms, fortsätter köra om inget annat kommando ges
+  goBackward(500);  //Kör bakåt i 500ms, fortsätter köra om inget annat kommando ges
+  goLeft(500);  //Svänger vänster i 500ms, fortsätter köra om inget annat kommando ges
+  goRight(500);  //Svänger höger i 500ms, fortsätter köra om inget annat kommando ges
+  goStop(500);  //Står stilla i 500ms, fortsätter köra om inget annat kommando ges
+  
+  turnHead(50); //Vänder huvudet till 50 grader
+  
+  int distance = lookAhead(); //Läser av avståndet till närmsta hinder
+  Serial.println(distance); //Skriver ut till USB så att det går att se via Verktyg -> Seriell Monitor (Tools -> Serial Monitor)
 }
 
 
