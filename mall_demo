@@ -79,12 +79,14 @@ void loop() {
 
 void loop() {
   showDisplay(face); //Ritar ut mönstret "face" till display
+
+  Serial.println(lookAhead());
   
   for (int i = 0; i < 90; i++) {
    turnHead(i);
   }
   
-  if (lookAhead() < 7) {
+  if (lookAhead() < 30) {
     goBackward(500);
     goStop(50);
     goLeft(500);
