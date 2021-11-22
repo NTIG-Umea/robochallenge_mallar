@@ -124,7 +124,7 @@ void goBackward(int time) {
   delay(time);
 }
 
-void goLeft(int time){
+void goRight(int time){
   digitalWrite(ML_Ctrl,HIGH);
   analogWrite(ML_PWM,200);
   digitalWrite(MR_Ctrl,LOW);
@@ -132,7 +132,7 @@ void goLeft(int time){
   delay(time);
 }
 
-void goRight(int time){
+void goLeft(int time){
   digitalWrite(ML_Ctrl,LOW);
   analogWrite(ML_PWM,200);
   digitalWrite(MR_Ctrl,HIGH);
